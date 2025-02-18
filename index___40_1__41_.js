@@ -19,7 +19,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
 
-const ownerNumber = ['94779415698']
+const ownerNumber = ['923239956476']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -39,7 +39,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("Connecting wa bot 🧬...");
+console.log("Connecting Mudasir_Sports71 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -69,7 +69,7 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `Wa-BOT connected successful ✅\n\nPREFIX: ${prefix}`;
+let up = `Mudasir_Sports71 connected successful ✅\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: up })
 
@@ -94,11 +94,11 @@ const args = body.trim().split(/ +/).slice(1)
 const q = args.join(' ')
 const isGroup = from.endsWith('@g.us')
 const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
-const senderNumber = sender.split('@')[0]
+const senderNumber = sender.split('923239956476')[0]
 const botNumber = conn.user.id.split(':')[0]
-const pushname = mek.pushName || 'Sin Nombre'
-const isMe = botNumber.includes(senderNumber)
-const isOwner = ownerNumber.includes(senderNumber) || isMe
+const pushname = mek.pushName || 'Mudasir King'
+const isMe = botNumber.includes(Mudasirking)
+const isOwner = ownerNumber.includes(MudasirKing) || isMe
 const botNumber2 = await jidNormalizedUser(conn.user.id);
 const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(e => {}) : ''
 const groupName = isGroup ? groupMetadata.subject : ''
